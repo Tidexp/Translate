@@ -2,8 +2,8 @@ import pathlib
 import argostranslate.package as package
 import traceback
 
-package_path_en_vi = pathlib.Path("/app/vi/translate-en_vi-1_0.argosmodel")
-package_path_vi_en = pathlib.Path("/app/vi/translate-vi_en-1_0.argosmodel")
+package_path_en_vi = pathlib.Path("/app/vi/translate-en_vi-1_9.argosmodel")
+package_path_vi_en = pathlib.Path("/app/vi/translate-vi_en-1_9.argosmodel")
 
 def install_model(path):
     try:
