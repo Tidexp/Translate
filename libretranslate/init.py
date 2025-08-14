@@ -1,6 +1,7 @@
 
 from argostranslate import package, translate
 from packaging import version
+import pathlib
 
 import libretranslate.language
 

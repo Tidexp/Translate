@@ -4,6 +4,8 @@ services:
     image: libretranslate/libretranslate:latest
     ports:
       - "5000:5000"
+    environment:
+      - LT_LOAD_ONLY=en,fr
     restart: unless-stopped
     healthcheck:
       test: ['CMD-SHELL', './venv/bin/python scripts/healthcheck.py']
@@ -11,6 +13,8 @@ services:
       timeout: 4s
       retries: 4
       start_period: 5s
+    volumes:
+      - ./vi:/app/vi
     ## Uncomment above command and define your args if necessary
     # command: --ssl --ga-id MY-GA-ID --req-limit 100 --char-limit 500
     ## Uncomment this section and the libretranslate_api_keys volume if you want to backup your API keys
